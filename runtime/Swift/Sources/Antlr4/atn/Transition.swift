@@ -64,8 +64,6 @@ public class Transition {
             String(describing: NotSetTransition.self): NOT_SET,
             String(describing: WildcardTransition.self): WILDCARD,
             String(describing: PrecedencePredicateTransition.self): PRECEDENCE,
-
-
     ]
 
 
@@ -75,9 +73,7 @@ public class Transition {
 
     public internal(set) final var target: ATNState
 
-    init(_ target: ATNState) {
-
-
+    public init(_ target: ATNState) {
         self.target = target
     }
 
@@ -97,7 +93,6 @@ public class Transition {
     public func isEpsilon() -> Bool {
         return false
     }
-
 
     public func labelIntervalSet() -> IntervalSet? {
         return nil

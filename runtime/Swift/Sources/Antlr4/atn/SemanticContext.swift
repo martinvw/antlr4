@@ -24,6 +24,9 @@ public class SemanticContext: Hashable, CustomStringConvertible {
     /// 
     public static let NONE: SemanticContext = Predicate()
 
+    public init() {
+    }
+    
     /// 
     /// For context independent predicates, we evaluate them without a local
     /// context (i.e., null context). That way, we can evaluate them without
@@ -74,9 +77,8 @@ public class SemanticContext: Hashable, CustomStringConvertible {
         public let predIndex: Int
         public let isCtxDependent: Bool
         // e.g., $i ref in pred
-
-        override
-        public init() {
+        
+        public override init() {
             self.ruleIndex = -1
             self.predIndex = -1
             self.isCtxDependent = false

@@ -24,7 +24,10 @@ open class Recognizer<ATNInterpreter: ATNSimulator>: RecognizerProtocol {
     public var _interp: ATNInterpreter!
 
     private var _stateNumber = -1
-
+    
+    public init() {
+    }
+    
     open func getRuleNames() -> [String] {
         fatalError(#function + " must be overridden")
     }

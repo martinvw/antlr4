@@ -103,7 +103,7 @@ public class TokenStreamRewriter {
             self.tokens = tokens
         }
 
-        init(_ index: Int, _ text: String?, _ tokens: TokenStream) {
+        public init(_ index: Int, _ text: String?, _ tokens: TokenStream) {
             self.index = index
             self.text = text
             self.tokens = tokens
